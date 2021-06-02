@@ -3,4 +3,5 @@
     <dimen name="user_placeholder_dimen">100dp</dimen>
     <dimen name="textpadding">8dp</dimen>
     <dimen name="img_dimens">200dp</dimen>
+    <dimen name="icons_dimen">30dp</dimen>
 </resources>

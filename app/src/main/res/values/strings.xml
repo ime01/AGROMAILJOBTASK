@@ -15,6 +15,10 @@
     <string name="correct_details">Ensure you have entered your correct details</string>
     <string name="login_success">Logged In Successfully</string>
     <string name="enter_email">Enter Test Email</string>
+    <string name="user_placholder_image">Place Holder Image</string>
+    <string name="not_loaded">New page could not be loaded</string>
+    <string name="retry">RETRY</string>
+    <string name="unable_to_fetch_data">Unable to fetch data</string>
 
 
 </resources>
