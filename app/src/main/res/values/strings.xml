@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AGROMALLJOBTASK</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signin">Enter your admin details to Login</string>
+    <string name="enter_first_name">Enter your firstname</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="login">Login</string>
+    <string name="create_new">Don\'t have an account? don\'t worry create one here</string>
+    <string name="forgottenpassword">Forgotten your password? retrieve it here</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="to_be_implemented">To be implemented when I start the job</string>
+    <string name="firstname_error">Please enter your first name</string>
+    <string name="lastname_error">Please enter your last name</string>
+    <string name="correct_details">Ensure you have entered your correct details</string>
+    <string name="login_success">Logged In Successfully</string>
+    <string name="enter_email">Enter Test Email</string>
+
+
+</resources>

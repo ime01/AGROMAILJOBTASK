@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/farmer_navigation.xml"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.flowz.agromailjobtask.ui.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_farmersListFragment"
+            app:destination="@id/farmersListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/farmersListFragment"
+        android:name="com.flowz.agromailjobtask.ui.fragments.FarmersListFragment"
+        android:label="Farmers List"
+        tools:layout="@layout/fragment_farmers_list" />
+    <fragment
+        android:id="@+id/editFarmerFragment"
+        android:name="com.flowz.agromailjobtask.ui.fragments.EditFarmerFragment"
+        android:label="Edit Farmer"
+        tools:layout="@layout/fragment_edit_farmer" />
+    <fragment
+        android:id="@+id/addNewFarmerFragment"
+        android:name="com.flowz.agromailjobtask.ui.fragments.AddNewFarmerFragment"
+        android:label="Add New Farmer"
+        tools:layout="@layout/fragment_add_new_farmer" />
+</navigation>
