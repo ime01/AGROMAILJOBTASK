@@ -36,28 +36,6 @@ fun clearTexts(views: Array<TextInputEditText>) {
     }
 }
 
-fun loadJson(context: Context):String?{
-    var input: InputStream? = null
-    var jsonString: String
-
-    try {
-//            input = context.assets.open("test.json")
-        input = context.assets.open("countriestates.json")
-        val size = input.available()
-        val buffer = ByteArray(size)
-        input.read(buffer)
-        jsonString = String(buffer)
-        return jsonString
-    }
-    catch (e:Exception){
-        e.printStackTrace()
-    }
-    finally {
-        input?.close()
-    }
-    return null
-}
-
 fun getImageUri(inContext: Context, inImage: Bitmap): Uri? {
     val bytes = ByteArrayOutputStream()
     inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes)

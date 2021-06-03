@@ -19,6 +19,10 @@
     <string name="not_loaded">New page could not be loaded</string>
     <string name="retry">RETRY</string>
     <string name="unable_to_fetch_data">Unable to fetch data</string>
+    <string name="delete_farmer">Delete Farmer</string>
+    <string name="sure_to_delete">Are you sure?</string>
+    <string name="ok">Yes</string>
+    <string name="cancel_delete">Cancel</string>
 
 
 </resources>

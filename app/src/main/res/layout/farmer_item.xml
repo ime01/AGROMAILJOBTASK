@@ -27,6 +27,7 @@
                 android:id="@+id/farmer_passport_photo"
                 android:layout_width="@dimen/user_placeholder_dimen"
                 android:layout_height="@dimen/user_placeholder_dimen"
+                android:layout_marginTop="8dp"
                 android:contentDescription="@string/user_placholder_image"
                 android:src="@drawable/ic_baseline_person_24"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -1,6 +1,6 @@
-package com.flowz.agromailjobtask.ui.network
+package com.flowz.agromailjobtask.network
 
-import com.flowz.agromailjobtask.models.FarmerResponse
+import com.flowz.agromailjobtask.models.networkmodels.FarmerResponse
 import com.flowz.agromailjobtask.utils.Constants
 import retrofit2.Response
 import retrofit2.http.GET

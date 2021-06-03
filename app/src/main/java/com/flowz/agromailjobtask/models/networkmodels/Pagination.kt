@@ -1,7 +1,5 @@
-package com.flowz.agromailjobtask.models
+package com.flowz.agromailjobtask.models.networkmodels
 
-
-import com.google.gson.annotations.SerializedName
 
 data class Pagination(
     val currentPage: Int,

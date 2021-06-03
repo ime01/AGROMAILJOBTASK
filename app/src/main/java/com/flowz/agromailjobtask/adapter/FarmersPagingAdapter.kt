@@ -9,7 +9,8 @@ import coil.load
 import com.bumptech.glide.Glide
 import com.flowz.agromailjobtask.R
 import com.flowz.agromailjobtask.databinding.FarmerItemBinding
-import com.flowz.agromailjobtask.models.Farmer
+import com.flowz.agromailjobtask.models.networkmodels.Farmer
+import com.flowz.agromailjobtask.utils.Constants.IMG_BASEURL
 
 class FarmersPagingAdapter(private val listener: RowClickListener ): PagingDataAdapter<Farmer, FarmersPagingAdapter.MyViewHolder>(diffCallback) {
 
@@ -24,7 +25,7 @@ class FarmersPagingAdapter(private val listener: RowClickListener ): PagingDataA
 
         holder.binding.apply {
 
-            val imageLink = currentItem?.passportPhoto
+            val imageLink = IMG_BASEURL +  currentItem?.passportPhoto
 
             holder.itemView.apply {
                 farmerName.text = "${currentItem?.fullName}"

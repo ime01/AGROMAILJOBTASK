@@ -1,10 +1,14 @@
 package com.flowz.agromailjobtask.di
 
-import com.flowz.agromailjobtask.ui.network.ApiServiceCalls
+import android.content.Context
+import androidx.room.Room
+import com.flowz.agromailjobtask.network.ApiServiceCalls
+import com.flowz.agromailjobtask.roomdb.FarmersDatabase
 import com.flowz.agromailjobtask.utils.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -33,4 +37,17 @@ object AppModule {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiServiceCalls::class.java)
+
+
+    @Provides
+    @Singleton
+    fun providesFarmersDatabase(@ApplicationContext app: Context) =
+        Room.databaseBuilder(app, FarmersDatabase::class.java, "farmers.db").build()
+
+    @Provides
+    @Singleton
+    fun providesFarmersDao (db: FarmersDatabase) = db.farmersDao()
+
+
+
 }

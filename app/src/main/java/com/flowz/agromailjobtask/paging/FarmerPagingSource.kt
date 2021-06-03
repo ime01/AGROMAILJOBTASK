@@ -3,8 +3,8 @@ package com.flowz.agromailjobtask.paging
 import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.flowz.agromailjobtask.models.Farmer
-import com.flowz.agromailjobtask.ui.network.ApiServiceCalls
+import com.flowz.agromailjobtask.models.networkmodels.Farmer
+import com.flowz.agromailjobtask.network.ApiServiceCalls
 
 class FarmerPagingSource(private val apiService: ApiServiceCalls): PagingSource<Int, Farmer>() {
 
