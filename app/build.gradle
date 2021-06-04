@@ -60,6 +60,9 @@ dependencies {
 
     implementation "androidx.fragment:fragment-ktx:1.2.5"
 
+    //map
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"

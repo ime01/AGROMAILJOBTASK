@@ -9,6 +9,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.flowz.agromailjobtask.R
 import com.flowz.agromailjobtask.databinding.FragmentLandingStatisticsBinding
+import com.flowz.byteworksjobtask.util.playAnimation
 
 
 class LandingStatisticsFragment : Fragment(R.layout.fragment_landing_statistics) {
@@ -25,6 +26,11 @@ class LandingStatisticsFragment : Fragment(R.layout.fragment_landing_statistics)
 
         _binding = FragmentLandingStatisticsBinding.bind(view)
         val navController : NavController = Navigation.findNavController(view)
+
+        playAnimation(requireContext(), R.anim.blink, binding.farmers)
+        playAnimation(requireContext(), R.anim.blink, binding.farmland)
+        playAnimation(requireContext(), R.anim.blink, binding.totalFarmers)
+        playAnimation(requireContext(), R.anim.blink, binding.totalFarms)
 
 
         binding.apply {

@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_landingStatisticsFragment"
-            app:destination="@id/landingStatisticsFragment" />
+            app:destination="@id/landingStatisticsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
     </fragment>
     <fragment
         android:id="@+id/farmersListFragment"
@@ -22,9 +23,7 @@
         <action
             android:id="@+id/action_farmersListFragment_to_editFarmerFragment"
             app:destination="@id/editFarmerFragment" />
-        <action
-            android:id="@+id/action_farmersListFragment_to_addNewFarmerFragment"
-            app:destination="@id/addNewFarmerFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/editFarmerFragment"
@@ -32,21 +31,20 @@
         android:label="Edit Farmer"
         tools:layout="@layout/fragment_edit_farmer" />
     <fragment
-        android:id="@+id/addNewFarmerFragment"
-        android:name="com.flowz.agromailjobtask.ui.fragments.AddNewFarmerFragment"
-        android:label="Add New Farmer"
-        tools:layout="@layout/fragment_add_new_farmer" />
-    <fragment
         android:id="@+id/landingStatisticsFragment"
         android:name="com.flowz.agromailjobtask.ui.fragments.LandingStatisticsFragment"
         android:label="Home Dashboard"
         tools:layout="@layout/fragment_landing_statistics" >
         <action
             android:id="@+id/action_landingStatisticsFragment_to_farmersListFragment"
-            app:destination="@id/farmersListFragment" />
+            app:destination="@id/farmersListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
         <action
             android:id="@+id/action_landingStatisticsFragment_to_farmFragment"
-            app:destination="@id/farmFragment" />
+            app:destination="@id/farmFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/farmFragment"
@@ -54,12 +52,24 @@
         android:label="Farms"
         tools:layout="@layout/fragment_farm" >
         <action
-            android:id="@+id/action_farmFragment_to_addFarmFragment"
-            app:destination="@id/addFarmFragment" />
+            android:id="@+id/action_farmFragment_to_farmDetailFragment"
+            app:destination="@id/farmDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <argument
+            android:name="farm"
+            app:argType="com.flowz.agromailjobtask.models.roomdbmodels.Farm"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
-        android:id="@+id/addFarmFragment"
-        android:name="com.flowz.agromailjobtask.AddFarmFragment"
-        android:label="fragment_blank"
-        tools:layout="@layout/fragment_blank" />
+        android:id="@+id/farmDetailFragment"
+        android:name="com.flowz.agromailjobtask.ui.fragments.farm.FarmDetailFragment"
+        android:label="Farm Details and MapView" >
+        <argument
+            android:name="farm"
+            app:argType="com.flowz.agromailjobtask.models.roomdbmodels.Farm"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
 </navigation>

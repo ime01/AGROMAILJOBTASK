@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.flowz.agromailjobtask.R
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,7 +20,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [EditFarmerFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class EditFarmerFragment : Fragment() {
+class EditFarmerFragment : Fragment(), OnMapReadyCallback {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -36,6 +39,16 @@ class EditFarmerFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_edit_farmer, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+//        val mapFragment = requireActivity().supportFragmentManager.findFragmentById(R.id.google_map) as SupportMapFragment
+//        mapFragment.getMapAsync(this)
+    }
+
+    override fun onMapReady(p0: GoogleMap?) {
+
     }
 
     companion object {
@@ -57,4 +70,6 @@ class EditFarmerFragment : Fragment() {
                 }
             }
     }
+
+
 }

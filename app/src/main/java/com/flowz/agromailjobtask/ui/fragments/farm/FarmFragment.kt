@@ -17,6 +17,7 @@ import com.flowz.agromailjobtask.adapter.FarmAdapter
 import com.flowz.agromailjobtask.databinding.FragmentFarmBinding
 import com.flowz.agromailjobtask.databinding.FragmentFarmersListBinding
 import com.flowz.agromailjobtask.models.roomdbmodels.Farm
+import com.flowz.byteworksjobtask.util.playAnimation
 import com.flowz.byteworksjobtask.util.showSnackbar
 import com.flowz.byteworksjobtask.util.takeWords
 import com.google.android.material.button.MaterialButton
@@ -107,11 +108,12 @@ class FarmFragment : Fragment(R.layout.fragment_farm), FarmAdapter.RowClickListe
             }
         }
 
-
-
     }
 
     override fun onItemClickListener(farm: Farm) {
+        val action = FarmFragmentDirections.actionFarmFragmentToFarmDetailFragment()
+        action.farm = farm
+        Navigation.findNavController(requireView()).navigate(action)
         showSnackbar(binding.root, "Farm ${farm.farmName} Clicked")
     }
 }

@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.flowz.agromailjobtask.R
@@ -96,6 +97,7 @@ class FarmersListFragment : Fragment(R.layout.fragment_farmers_list), FarmersPag
             }
 
             fab.setOnClickListener {
+                Navigation.findNavController(requireView()).navigate(R.id.action_farmersListFragment_to_editFarmerFragment)
                showSnackbar(fab, "FAB CLICKED")
             }
 
