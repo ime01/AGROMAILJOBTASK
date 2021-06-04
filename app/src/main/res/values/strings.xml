@@ -23,6 +23,20 @@
     <string name="sure_to_delete">Are you sure?</string>
     <string name="ok">Yes</string>
     <string name="cancel_delete">Cancel</string>
+    <string name="welcome_to_agromall">Welcome to AgroMall</string>
+    <string name="view_farms">VIEW FARMS</string>
+    <string name="view_farmers">VIEW FARMERS</string>
+    <string name="add_a_new_farm_here">ADD A NEW FARM HERE</string>
+    <string name="enter_farm_name">Enter farm name here</string>
+    <string name="farm_owner">Enter farm owner name</string>
+    <string name="save_farm">Save New Farm</string>
+    <string name="farm_coordinate_lng">Enter farm Coordinate Longitude</string>
+    <string name="farm_coordinate_lat">Enter farm coordinate Latitude</string>
+    <string name="enter_name_error">Ensure you have entered farm name</string>
+    <string name="enter_owner_name">Ensure you have entered farm owner name</string>
+    <string name="enter_valid_location">Ensure to enter Farm Location</string>
+    <string name="enter_valid_lat">Ensure to enter valid Latitude</string>
+    <string name="enter_valid_lng">Ensure to enter valid Longitude</string>
 
 
 </resources>

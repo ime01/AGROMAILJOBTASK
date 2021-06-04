@@ -48,6 +48,10 @@ object AppModule {
     @Singleton
     fun providesFarmersDao (db: FarmersDatabase) = db.farmersDao()
 
+    @Provides
+    @Singleton
+    fun providesFarmDao (db: FarmersDatabase) = db.farmDao()
+
 
 
 }

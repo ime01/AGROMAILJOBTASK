@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.LandingStatisticsFragment">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/farmers"
+        android:layout_width="@dimen/land_dimens"
+        android:layout_height="@dimen/land_dimens"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/farmersicon5"
+        app:layout_constraintEnd_toStartOf="@+id/farmland"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/farmland"
+        app:shapeAppearanceOverlay="@style/Circular"
+        app:strokeWidth="5dp"
+        app:strokeColor="@color/green"
+
+        />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/farmland"
+        android:layout_width="@dimen/land_dimens"
+        android:layout_height="@dimen/land_dimens"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/tractor3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/farmers"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Circular"
+        app:strokeWidth="5dp"
+        app:strokeColor="@color/green"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/total_farmers"
+        style="@style/UserDetailsStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@id/farmers"
+        app:layout_constraintStart_toStartOf="@id/farmers"
+        app:layout_constraintTop_toBottomOf="@+id/farmers" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/total_farms"
+        style="@style/UserDetailsStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@id/farmland"
+        app:layout_constraintStart_toStartOf="@id/farmland"
+        app:layout_constraintTop_toBottomOf="@+id/farmland" />
+
+    <Button
+        android:id="@+id/open_farmers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/view_farmers"
+        android:fontFamily="@font/almendra"
+        app:layout_constraintBottom_toBottomOf="@+id/open_farms"
+        app:layout_constraintEnd_toEndOf="@+id/total_farmers"
+        app:layout_constraintStart_toStartOf="@+id/total_farmers"
+        app:layout_constraintTop_toBottomOf="@+id/total_farmers" />
+
+    <Button
+        android:id="@+id/open_farms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/almendra"
+        android:text="@string/view_farms"
+        app:layout_constraintEnd_toEndOf="@+id/total_farms"
+        app:layout_constraintStart_toStartOf="@+id/total_farms"
+        app:layout_constraintTop_toBottomOf="@+id/total_farms" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/farmers"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
+        app:strokeWidth="5dp"
+        app:strokeColor="@color/green"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/green"
+        android:fontFamily="@font/almendra"
+        android:text="@string/welcome_to_agromall"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/open_farmers"
+        app:layout_constraintVertical_bias="0.085" />
+</androidx.constraintlayout.widget.ConstraintLayout>

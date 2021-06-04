@@ -33,7 +33,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [LoginFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class LoginFragment : Fragment() {
+class LoginFragment : Fragment(R.layout.fragment_login) {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
@@ -44,12 +44,6 @@ class LoginFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -88,7 +82,7 @@ class LoginFragment : Fragment() {
                 }else{
 
                     if (lgFirstName.takeWords() == readFirstName &&  lgPassword.takeWords() == readPasswordName){
-                        navController.navigate(R.id.action_loginFragment_to_farmersListFragment)
+                        navController.navigate(R.id.action_loginFragment_to_landingStatisticsFragment)
                         showSnackbar(lgFirstName, getString(R.string.login_success))
                     }else{
                         showSnackbar(lgFirstName, getString(R.string.correct_details))
@@ -103,8 +97,6 @@ class LoginFragment : Fragment() {
             forgottenPassword.setOnClickListener {
                 showSnackbar(noAccount, getString(R.string.to_be_implemented))
             }
-
-
 
         }
 
