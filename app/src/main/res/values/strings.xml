@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">AGROMALLJOBTASK</string>
+    <string name="map_key" translatable="false">AIzaSyA2JAmazOay4fV-wCWAZE8d2xjTy31BR-4</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signin">Enter your admin details to Login</string>
+    <string name="enter_first_name">Enter your firstname</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="login">Login</string>
+    <string name="create_new">Don\'t have an account? don\'t worry create one here</string>
+    <string name="forgottenpassword">Forgotten your password? retrieve it here</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="to_be_implemented">To be implemented when I start the job</string>
+    <string name="firstname_error">Please enter your first name</string>
+    <string name="lastname_error">Please enter your last name</string>
+    <string name="correct_details">Ensure you have entered your correct details</string>
+    <string name="login_success">Logged In Successfully</string>
+    <string name="enter_email">Enter Test Email</string>
+    <string name="user_placholder_image">Place Holder Image</string>
+    <string name="not_loaded">New page could not be loaded</string>
+    <string name="retry">RETRY</string>
+    <string name="unable_to_fetch_data">Unable to fetch data</string>
+    <string name="delete_farmer">Delete Farmer</string>
+    <string name="sure_to_delete">Are you sure?</string>
+    <string name="ok">Yes</string>
+    <string name="cancel_delete">Cancel</string>
+    <string name="welcome_to_agromall">Welcome to AgroMall</string>
+    <string name="view_farms">VIEW FARMS</string>
+    <string name="view_farmers">VIEW FARMERS</string>
+    <string name="add_a_new_farm_here">ADD A NEW FARM HERE</string>
+    <string name="enter_farm_name">Enter farm name here</string>
+    <string name="farm_owner">Enter farm owner name</string>
+    <string name="save_farm">Save New Farm</string>
+    <string name="farm_coordinate_lng">Enter farm Coordinate Longitude</string>
+    <string name="farm_coordinate_lat">Enter farm coordinate Latitude</string>
+    <string name="enter_name_error">Ensure you have entered farm name</string>
+    <string name="enter_owner_name">Ensure you have entered farm owner name</string>
+    <string name="enter_valid_location">Ensure to enter Farm Location</string>
+    <string name="enter_valid_lat">Ensure to enter valid Latitude</string>
+    <string name="enter_valid_lng">Ensure to enter valid Longitude</string>
+
+
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ei_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/design_default_color_secondary"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="1dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/farmer_passport_photo"
+                android:layout_width="@dimen/user_placeholder_dimen"
+                android:layout_height="@dimen/user_placeholder_dimen"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/user_placholder_image"
+                android:src="@drawable/ic_baseline_person_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.034" />
+
+            <TextView
+                android:id="@+id/farmer_name"
+                style="@style/UserDetailsStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                app:layout_constraintEnd_toStartOf="@id/edit_farmer"
+                app:layout_constraintStart_toEndOf="@+id/farmer_passport_photo"
+                app:layout_constraintTop_toTopOf="@id/farmer_passport_photo" />
+
+            <TextView
+                android:id="@+id/phone_number"
+                style="@style/UserDetailsStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/farmer_name"
+                app:layout_constraintStart_toStartOf="@+id/farmer_name"
+                app:layout_constraintTop_toBottomOf="@id/farmer_name"
+                app:layout_constraintVertical_bias="0.044" />
+
+            <TextView
+                android:id="@+id/farmer_state"
+                style="@style/UserDetailsStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="@+id/phone_number"
+                app:layout_constraintStart_toEndOf="@+id/farmer_passport_photo"
+                app:layout_constraintTop_toBottomOf="@+id/phone_number" />
+
+            <TextView
+                android:id="@+id/farmer_lga"
+                style="@style/UserDetailsStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text=""
+                app:layout_constraintEnd_toStartOf="@+id/delete_farmer"
+                app:layout_constraintStart_toEndOf="@+id/farmer_passport_photo"
+                app:layout_constraintTop_toBottomOf="@+id/farmer_state" />
+
+            <ImageView
+                android:id="@+id/edit_farmer"
+                android:layout_width="@dimen/icons_dimen"
+                android:layout_height="@dimen/icons_dimen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/farmer_name"
+                app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+            <ImageView
+                android:id="@+id/delete_farmer"
+                android:layout_width="@dimen/icons_dimen"
+                android:layout_height="@dimen/icons_dimen"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

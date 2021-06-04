@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/add_new_farm_here"
+        style="@style/UserDetailsStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/almendra"
+        android:text="@string/add_a_new_farm_here"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_layout"
+        style="@style/TextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/textpadding"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="@dimen/textpadding"
+        android:hint="@string/enter_farm_name"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_new_farm_here">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/new_farm_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_agriculture_24"
+            android:fontFamily="@font/almendra"
+            android:inputType="textPersonName"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/farm_owner_layout"
+        style="@style/TextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/farm_owner"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/name_layout"
+        app:layout_constraintStart_toStartOf="@id/name_layout"
+        app:layout_constraintTop_toBottomOf="@id/name_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/new_farm_owner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:fontFamily="@font/almendra"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/farm_location_layout"
+        style="@style/TextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Enter farm location"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/farm_owner_layout"
+        app:layout_constraintStart_toStartOf="@id/farm_owner_layout"
+        app:layout_constraintTop_toBottomOf="@id/farm_owner_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/new_farm_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_add_location_24"
+            android:fontFamily="@font/almendra"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/farm_coordinatelat_layout"
+        style="@style/TextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/farm_coordinate_lat"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/farm_location_layout"
+        app:layout_constraintStart_toStartOf="@id/farm_location_layout"
+        app:layout_constraintTop_toBottomOf="@id/farm_location_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/new_farmcoordinate_lat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_add_location_alt_24"
+            android:fontFamily="@font/almendra"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/farm_coordinatelng_layout"
+        style="@style/TextLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:hint="@string/farm_coordinate_lng"
+        app:hintEnabled="true"
+        app:layout_constraintEnd_toEndOf="@id/farm_coordinatelat_layout"
+        app:layout_constraintStart_toStartOf="@id/farm_coordinatelat_layout"
+        app:layout_constraintTop_toBottomOf="@id/farm_coordinatelat_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/new_farmcoordinate_lng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_add_location_alt_24"
+            android:fontFamily="@font/almendra"
+            android:inputType="number|text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_new_farm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/almendra"
+        android:text="@string/save_farm"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/farm_coordinatelng_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
