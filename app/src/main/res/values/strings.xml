@@ -54,6 +54,8 @@
     <string name="choose_from_gallery">Choose Image From Gallery</string>
     <string name="open_camera">Open Camera</string>
     <string name="choose_image">"Chose Image "</string>
+    <string name="open_updated_and_saved"><![CDATA[Open Updated & Saved]]></string>
+    <string name="getting_job">To be implemeented when i get the job</string>
 
 
 </resources>

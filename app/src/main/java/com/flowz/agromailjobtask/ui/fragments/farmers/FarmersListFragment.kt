@@ -1,30 +1,22 @@
-package com.flowz.agromailjobtask.ui.fragments
+package com.flowz.agromailjobtask.ui.fragments.farmers
 
 import android.os.Bundle
 import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
-import androidx.lifecycle.asLiveData
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.paging.LoadState
-import androidx.paging.filter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.flowz.agromailjobtask.R
 import com.flowz.agromailjobtask.adapter.FarmersPagingAdapter
 import com.flowz.agromailjobtask.databinding.FragmentFarmersListBinding
 import com.flowz.agromailjobtask.models.networkmodels.Farmer
-import com.flowz.agromailjobtask.models.roomdbmodels.Farm
 import com.flowz.agromailjobtask.models.roomdbmodels.RdbFarmer
-import com.flowz.agromailjobtask.ui.FarmersViewModel
-import com.flowz.byteworksjobtask.util.showSnackbar
+import com.flowz.agromailjobtask.ui.fragments.farmers.FarmersListFragmentDirections
 import com.flowz.paging3withflow.ui.gridview.FarmerLoadStateAdapter
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
@@ -38,17 +30,12 @@ class FarmersListFragment : Fragment(R.layout.fragment_farmers_list), FarmersPag
     private var _binding: FragmentFarmersListBinding? = null
     private val binding get() = _binding!!
     private lateinit var farmerAdapter: FarmersPagingAdapter
-    private val viewModel: FarmersViewModel by viewModels()
+    private val viewModel: FarmersViewModel by activityViewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_farmers_list, container, false)
+        setHasOptionsMenu(true)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -104,6 +91,22 @@ class FarmersListFragment : Fragment(R.layout.fragment_farmers_list), FarmersPag
             }
 
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+
+        inflater.inflate(R.menu.menu_layout, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+
+            R.id.open_locally_saved_farmers -> {
+                Navigation.findNavController(requireView()).navigate(R.id.action_farmersListFragment_to_locallySavedFarmersFragment)
+            }
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 

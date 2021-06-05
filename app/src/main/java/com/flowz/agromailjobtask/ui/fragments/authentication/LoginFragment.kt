@@ -1,4 +1,4 @@
-package com.flowz.agromailjobtask.ui
+package com.flowz.agromailjobtask.ui.fragments.authentication
 
 import android.os.Bundle
 import android.text.TextUtils

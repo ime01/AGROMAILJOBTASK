@@ -1,16 +1,16 @@
-package com.flowz.agromailjobtask.ui.fragments
+package com.flowz.agromailjobtask.ui.fragments.landingdashboard
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.flowz.agromailjobtask.R
 import com.flowz.agromailjobtask.databinding.FragmentLandingStatisticsBinding
 import com.flowz.agromailjobtask.ui.fragments.farm.FarmsViewModel
+import com.flowz.agromailjobtask.ui.fragments.farmers.FarmersViewModel
 import com.flowz.byteworksjobtask.util.playAnimation
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -19,8 +19,10 @@ class LandingStatisticsFragment : Fragment(R.layout.fragment_landing_statistics)
 
     private var _binding: FragmentLandingStatisticsBinding? = null
     private val binding get() = _binding!!
-    private var totalNumberOfFarmsCaptured: Int? = null
-    private val viewModel: FarmsViewModel by activityViewModels()
+    private var totalNumberOfFarmsCaptured: Int? = 3
+    private var totalNumberOfFarmersCaptured: Int? = 5
+    private val farmviewModel: FarmsViewModel by activityViewModels()
+    private val farmersviewModel: FarmersViewModel by activityViewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,8 +40,12 @@ class LandingStatisticsFragment : Fragment(R.layout.fragment_landing_statistics)
         playAnimation(requireContext(), R.anim.blink, binding.totalFarmers)
         playAnimation(requireContext(), R.anim.blink, binding.totalFarms)
 
-        viewModel.farmsFromDb.observe(viewLifecycleOwner, Observer {
+        farmviewModel.farmsFromDb.observe(viewLifecycleOwner, Observer {
             totalNumberOfFarmsCaptured = it.size
+        })
+
+        farmersviewModel.farmersFromDb.observe(viewLifecycleOwner, Observer {
+            totalNumberOfFarmersCaptured = it.size
         })
 
 
@@ -54,6 +60,7 @@ class LandingStatisticsFragment : Fragment(R.layout.fragment_landing_statistics)
             }
 
             totalFarms.text = "Total Farms Captured ${totalNumberOfFarmsCaptured}"
+            totalFarmers.text = "Total Farmers Captured ${totalNumberOfFarmersCaptured}"
         }
     }
 

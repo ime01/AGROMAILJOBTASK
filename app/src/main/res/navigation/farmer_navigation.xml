@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.flowz.agromailjobtask.ui.LoginFragment"
+        android:name="com.flowz.agromailjobtask.ui.fragments.authentication.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/farmersListFragment"
-        android:name="com.flowz.agromailjobtask.ui.fragments.FarmersListFragment"
+        android:name="com.flowz.agromailjobtask.ui.fragments.farmers.FarmersListFragment"
         android:label="Farmers List"
         tools:layout="@layout/fragment_farmers_list" >
         <action
@@ -28,11 +28,14 @@
             app:argType="com.flowz.agromailjobtask.models.networkmodels.Farmer"
             app:nullable="true"
             android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_farmersListFragment_to_locallySavedFarmersFragment"
+            app:destination="@id/locallySavedFarmersFragment" />
 
     </fragment>
     <fragment
         android:id="@+id/editFarmerFragment"
-        android:name="com.flowz.agromailjobtask.ui.fragments.EditFarmerFragment"
+        android:name="com.flowz.agromailjobtask.ui.fragments.farmers.EditFarmerFragment"
         android:label="Edit Farmer"
         tools:layout="@layout/fragment_edit_farmer" >
         <argument
@@ -43,7 +46,7 @@
     </fragment>
     <fragment
         android:id="@+id/landingStatisticsFragment"
-        android:name="com.flowz.agromailjobtask.ui.fragments.LandingStatisticsFragment"
+        android:name="com.flowz.agromailjobtask.ui.fragments.landingdashboard.LandingStatisticsFragment"
         android:label="Home Dashboard"
         tools:layout="@layout/fragment_landing_statistics" >
         <action
@@ -83,4 +86,9 @@
             app:nullable="true"
             android:defaultValue="@null" />
     </fragment>
+    <fragment
+        android:id="@+id/locallySavedFarmersFragment"
+        android:name="com.flowz.agromailjobtask.ui.fragments.farmers.LocallySavedFarmersFragment"
+        android:label="Updated and Locally Saved Farmers"
+        tools:layout="@layout/fragment_locally_saved_farmers" />
 </navigation>

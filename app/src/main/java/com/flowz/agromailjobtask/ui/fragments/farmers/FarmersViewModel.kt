@@ -1,4 +1,4 @@
-package com.flowz.agromailjobtask.ui
+package com.flowz.agromailjobtask.ui.fragments.farmers
 
 import androidx.core.net.toUri
 import androidx.lifecycle.*

@@ -1,6 +1,7 @@
-package com.flowz.agromailjobtask.ui.fragments
+package com.flowz.agromailjobtask.ui.fragments.farmers
 
 import android.app.Activity
+import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -12,22 +13,18 @@ import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.core.app.ActivityCompat
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.flowz.agromailjobtask.R
 import com.flowz.agromailjobtask.databinding.FragmentEditFarmerBinding
-import com.flowz.agromailjobtask.databinding.FragmentFarmersListBinding
 import com.flowz.agromailjobtask.models.networkmodels.Farmer
 import com.flowz.agromailjobtask.models.roomdbmodels.RdbFarmer
-import com.flowz.agromailjobtask.ui.FarmersViewModel
+import com.flowz.agromailjobtask.ui.fragments.farmers.EditFarmerFragmentArgs
 import com.flowz.agromailjobtask.utils.Constants
 import com.flowz.byteworksjobtask.util.*
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -38,7 +35,7 @@ class EditFarmerFragment : Fragment(R.layout.fragment_edit_farmer) {
     private var _binding: FragmentEditFarmerBinding? = null
     private val binding get() = _binding!!
     private var imageUri : Uri? = null
-    private val viewModel: FarmersViewModel by viewModels()
+    private val viewModel: FarmersViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +79,6 @@ class EditFarmerFragment : Fragment(R.layout.fragment_edit_farmer) {
 
                 val openCameraImage = alertView.findViewById<ImageView>(R.id.rg_open_camera)
                 val openGalleryImage = alertView.findViewById<ImageView>(R.id.open_gallery)
-
 
                 dialog.show()
 
@@ -157,13 +153,13 @@ class EditFarmerFragment : Fragment(R.layout.fragment_edit_farmer) {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == REQUESTCODE && resultCode == Activity.RESULT_OK && data!!.data != null ){
+        if (requestCode == REQUESTCODE && resultCode == RESULT_OK && data!!.data != null ){
 
             imageUri = data.data
             binding.farmerProfilePic.setImageURI(imageUri)
             showSnackbar(binding.farmerLga, "Profile pic selected for update....")
         }
-        else if (requestCode == IMAGECAPUTRECODE && resultCode == Activity.RESULT_OK){
+        else if (requestCode == IMAGECAPUTRECODE && resultCode == RESULT_OK){
 
             val rgPhoto = data!!.extras?.get("data") as Bitmap
 
@@ -177,9 +173,7 @@ class EditFarmerFragment : Fragment(R.layout.fragment_edit_farmer) {
         val intent = Intent()
         intent.type = "image/*"
         intent.action = Intent.ACTION_GET_CONTENT
-        startActivityForResult(intent,
-            REQUESTCODE
-        )
+        startActivityForResult(intent, REQUESTCODE)
     }
 
     private fun openCamera() {
@@ -191,9 +185,9 @@ class EditFarmerFragment : Fragment(R.layout.fragment_edit_farmer) {
 
     companion object {
 
-        val READIMAGE = 255
-        val REQUESTCODE = 100
-        val IMAGECAPUTRECODE = 400
+        val READIMAGE = 10
+        val REQUESTCODE = 20
+        val IMAGECAPUTRECODE = 30
 
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
