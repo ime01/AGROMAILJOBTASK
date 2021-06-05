@@ -1,8 +1,11 @@
 package com.flowz.agromailjobtask.models.networkmodels
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Farmer(
     @SerializedName("farmer_id")
     val farmerId: String,
@@ -14,4 +17,4 @@ data class Farmer(
     @SerializedName("passport_photo")
     val passportPhoto: String,
     val state: String
-)
+): Parcelable

@@ -21,7 +21,7 @@ import javax.inject.Inject
 @HiltViewModel()
 class FarmsViewModel @Inject constructor(private val farmRepository: FarmRepository): ViewModel() {
 
-    val farmersFromDb = farmRepository.farmsFromDb
+    val farmsFromDb = farmRepository.farmsFromDb
 
     fun insertFarm(farm: Farm){
         viewModelScope.launch (Dispatchers.IO){

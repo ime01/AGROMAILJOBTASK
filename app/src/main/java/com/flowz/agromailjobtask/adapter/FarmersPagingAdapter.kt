@@ -33,6 +33,7 @@ class FarmersPagingAdapter(private val listener: RowClickListener ): PagingDataA
                 farmerState.text = "${currentItem?.state}"
                 farmerLga.text = "${currentItem?.lga}"
 
+//                coil
 //                farmerPassportPhoto.load(imageLink){
 //                    error(R.drawable.ic_baseline_error_outline_24)
 //                    placeholder(R.drawable.ic_baseline_person_24)

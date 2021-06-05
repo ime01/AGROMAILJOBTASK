@@ -39,6 +39,21 @@
     <string name="enter_valid_location">Ensure to enter Farm Location</string>
     <string name="enter_valid_lat">Ensure to enter valid Latitude</string>
     <string name="enter_valid_lng">Ensure to enter valid Longitude</string>
+    <string name="add_a_new_farmer_here"><![CDATA[Update & Locally Save a Farmer]]></string>
+    <string name="update_and_save">Update and Save</string>
+    <string name="update_farmer_name">Update farmer name</string>
+    <string name="update_farmer_l_g_a">Update Farmer L.G.A</string>
+    <string name="update_farmer_mobile_number">Update Farmer mobile Number</string>
+    <string name="update_farmer_state">Update Farmer State</string>
+    <string name="update_name">Ensure you have updated the name</string>
+    <string name="update_lga">Ensure you have updated farmer LGA</string>
+    <string name="update_mobile_number">Ensure you update mobile number</string>
+    <string name="farm_name_error">Ensure you enter farmer name</string>
+    <string name="lga_error">Ensure you enter farmer LGA</string>
+    <string name="number_error">Ensure you enter farmer number</string>
+    <string name="choose_from_gallery">Choose Image From Gallery</string>
+    <string name="open_camera">Open Camera</string>
+    <string name="choose_image">"Chose Image "</string>
 
 
 </resources>

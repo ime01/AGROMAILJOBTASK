@@ -5,8 +5,7 @@ import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.LinearLayout
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
@@ -15,9 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.flowz.agromailjobtask.R
 import com.flowz.agromailjobtask.adapter.FarmAdapter
 import com.flowz.agromailjobtask.databinding.FragmentFarmBinding
-import com.flowz.agromailjobtask.databinding.FragmentFarmersListBinding
 import com.flowz.agromailjobtask.models.roomdbmodels.Farm
-import com.flowz.byteworksjobtask.util.playAnimation
 import com.flowz.byteworksjobtask.util.showSnackbar
 import com.flowz.byteworksjobtask.util.takeWords
 import com.google.android.material.button.MaterialButton
@@ -31,10 +28,11 @@ class FarmFragment : Fragment(R.layout.fragment_farm), FarmAdapter.RowClickListe
     private var _binding: FragmentFarmBinding? = null
     private val binding get() = _binding!!
     private lateinit var farmAdapter: FarmAdapter
-    private val viewModel: FarmsViewModel by viewModels()
+    private val viewModel: FarmsViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -96,7 +94,7 @@ class FarmFragment : Fragment(R.layout.fragment_farm), FarmAdapter.RowClickListe
 
        farmAdapter = FarmAdapter(this@FarmFragment)
 
-        viewModel.farmersFromDb.observe(viewLifecycleOwner, Observer {
+        viewModel.farmsFromDb.observe(viewLifecycleOwner, Observer {
             farmAdapter.submitList(it)
         })
 

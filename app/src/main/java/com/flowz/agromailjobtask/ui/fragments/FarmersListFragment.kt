@@ -12,13 +12,16 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.paging.LoadState
+import androidx.paging.filter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.flowz.agromailjobtask.R
 import com.flowz.agromailjobtask.adapter.FarmersPagingAdapter
 import com.flowz.agromailjobtask.databinding.FragmentFarmersListBinding
 import com.flowz.agromailjobtask.models.networkmodels.Farmer
+import com.flowz.agromailjobtask.models.roomdbmodels.Farm
 import com.flowz.agromailjobtask.models.roomdbmodels.RdbFarmer
 import com.flowz.agromailjobtask.ui.FarmersViewModel
 import com.flowz.byteworksjobtask.util.showSnackbar
@@ -98,7 +101,6 @@ class FarmersListFragment : Fragment(R.layout.fragment_farmers_list), FarmersPag
 
             fab.setOnClickListener {
                 Navigation.findNavController(requireView()).navigate(R.id.action_farmersListFragment_to_editFarmerFragment)
-               showSnackbar(fab, "FAB CLICKED")
             }
 
         }
@@ -107,7 +109,6 @@ class FarmersListFragment : Fragment(R.layout.fragment_farmers_list), FarmersPag
 
     private fun loadData(){
         lifecycleScope.launch {
-
             viewModel.farmersDataFromNetwork.collect {
                 Log.e("Farmers","$it")
                 farmerAdapter.submitData(it)
@@ -122,7 +123,9 @@ class FarmersListFragment : Fragment(R.layout.fragment_farmers_list), FarmersPag
     }
 
     override fun onEditClickListener(farmer: Farmer) {
-       showSnackbar(binding.fab, "${farmer.fullName} Edited")
+        val action = FarmersListFragmentDirections.actionFarmersListFragmentToEditFarmerFragment()
+        action.farmer = farmer
+        Navigation.findNavController(requireView()).navigate(action)
     }
 
     override fun onDeleteClickListener(farmer: Farmer) {

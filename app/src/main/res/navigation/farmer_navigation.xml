@@ -23,13 +23,24 @@
         <action
             android:id="@+id/action_farmersListFragment_to_editFarmerFragment"
             app:destination="@id/editFarmerFragment" />
+        <argument
+            android:name="farmer"
+            app:argType="com.flowz.agromailjobtask.models.networkmodels.Farmer"
+            app:nullable="true"
+            android:defaultValue="@null" />
 
     </fragment>
     <fragment
         android:id="@+id/editFarmerFragment"
         android:name="com.flowz.agromailjobtask.ui.fragments.EditFarmerFragment"
         android:label="Edit Farmer"
-        tools:layout="@layout/fragment_edit_farmer" />
+        tools:layout="@layout/fragment_edit_farmer" >
+        <argument
+            android:name="farmer"
+            app:argType="com.flowz.agromailjobtask.models.networkmodels.Farmer"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
     <fragment
         android:id="@+id/landingStatisticsFragment"
         android:name="com.flowz.agromailjobtask.ui.fragments.LandingStatisticsFragment"
