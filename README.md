@@ -11,6 +11,8 @@ RETROFIT
 
 ROOM DATABSE
 
+JET PACK NAVIGATION WITH SAFE ARGS 
+
 COROUTINES
 
 GOOGLE MAPS 
@@ -28,8 +30,6 @@ SINGLE ACTIVITY PATTERN
 DEMO LINK
 
 https://youtu.be/t0tyN1pHDgg
-
-
 
 
 ![Screenshot_2021-06-05-18-15-21](https://user-images.githubusercontent.com/44091450/120900068-d06f3b80-c5e7-11eb-91f2-78b2482a648d.png)
