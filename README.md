@@ -1,6 +1,33 @@
 # AGROMAILJOBTASK
 AGROMALL JOB,  TASK ASSESSMENT APP
 
+App built with latest tools such as 
+
+DAGGERHILT
+
+PAGINATION 3
+
+RETROFIT
+
+ROOM DATABSE
+
+COROUTINES
+
+GOOGLE MAPS 
+
+POLYGON
+
+MVVM PATTERN
+
+LIVEDATA
+
+FLOW
+
+SINGLE ACTIVITY PATTERN
+
+
+
+
 ![Screenshot_2021-06-05-18-15-21](https://user-images.githubusercontent.com/44091450/120900068-d06f3b80-c5e7-11eb-91f2-78b2482a648d.png)
 ![Screenshot_2021-06-05-18-15-01](https://user-images.githubusercontent.com/44091450/120900075-d238ff00-c5e7-11eb-835f-356be4a516d1.png)
 ![Screenshot_2021-06-05-18-15-11](https://user-images.githubusercontent.com/44091450/120900077-d36a2c00-c5e7-11eb-8435-01f396174c39.png)
