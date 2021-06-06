@@ -2,7 +2,10 @@ package com.flowz.agromailjobtask.ui.fragments.farmers
 
 import android.os.Bundle
 import android.util.Log
-import android.view.*
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible

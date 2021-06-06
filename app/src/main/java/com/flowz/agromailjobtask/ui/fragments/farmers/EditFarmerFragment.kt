@@ -44,7 +44,6 @@ class EditFarmerFragment : Fragment(R.layout.fragment_edit_farmer) {
         }
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 

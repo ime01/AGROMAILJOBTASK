@@ -11,6 +11,8 @@ import com.flowz.agromailjobtask.R
 import com.flowz.agromailjobtask.databinding.FragmentLandingStatisticsBinding
 import com.flowz.agromailjobtask.ui.fragments.farm.FarmsViewModel
 import com.flowz.agromailjobtask.ui.fragments.farmers.FarmersViewModel
+import com.flowz.agromailjobtask.utils.Constants.DEFAULTFARMERSVALUE
+import com.flowz.agromailjobtask.utils.Constants.DEFAULTFARMSVALUE
 import com.flowz.byteworksjobtask.util.playAnimation
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -19,8 +21,8 @@ class LandingStatisticsFragment : Fragment(R.layout.fragment_landing_statistics)
 
     private var _binding: FragmentLandingStatisticsBinding? = null
     private val binding get() = _binding!!
-    private var totalNumberOfFarmsCaptured: Int? = 3
-    private var totalNumberOfFarmersCaptured: Int? = 5
+    private var totalNumberOfFarmsCaptured: Int? = DEFAULTFARMSVALUE
+    private var totalNumberOfFarmersCaptured: Int? = DEFAULTFARMERSVALUE
     private val farmviewModel: FarmsViewModel by activityViewModels()
     private val farmersviewModel: FarmersViewModel by activityViewModels()
 
